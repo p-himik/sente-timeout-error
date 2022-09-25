@@ -1,0 +1,8 @@
+{:paths   ["src"]
+ :deps    {org.clojure/clojure {:mvn/version "1.11.1"}
+           com.taoensso/sente  {:mvn/version "1.17.0"}
+           http-kit/http-kit   {:mvn/version "2.6.0"}
+           ring/ring-core      {:mvn/version "1.9.6"}}
+ :aliases {:run-server {:main-opts ["-m" "p-himik.sente-timeout-error"]}
+           :run-ui     {:extra-deps {thheller/shadow-cljs {:mvn/version "2.20.2"}}
+                        :main-opts  ["-m" "shadow.cljs.devtools.cli" "watch" "app"]}}}
